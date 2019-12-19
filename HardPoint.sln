@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "HardPoint", "HardPoint\HardPoint.njsproj", "{1617864C-930C-4D94-94F6-BD98E16B42C9}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "HardPointBasic", "HardPointBasic\HardPointBasic.njsproj", "{032D480C-5EEF-4BA8-971B-F023BAECD1BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{1617864C-930C-4D94-94F6-BD98E16B42C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1617864C-930C-4D94-94F6-BD98E16B42C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1617864C-930C-4D94-94F6-BD98E16B42C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{032D480C-5EEF-4BA8-971B-F023BAECD1BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{032D480C-5EEF-4BA8-971B-F023BAECD1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{032D480C-5EEF-4BA8-971B-F023BAECD1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{032D480C-5EEF-4BA8-971B-F023BAECD1BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
