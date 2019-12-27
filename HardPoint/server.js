@@ -1,4 +1,4 @@
-
+const Player = require('./Models/player');
 //Create express server.
 const app = require('express')();
 const express = require('express');
@@ -15,11 +15,69 @@ app.get('/', function (req, res) {
 //Setup listening port.
 const port = 3000;
 http.listen(port);
+//Setup Static Files
 app.use(express.static('Client'));
-io.on('connection', function (sock) {
-    console.log('new connection');
-    sock.on('text', function (msg) {
-        console.log('message' + msg);
+
+//Setup IO callbacks.
+io.on('connection', function (sock) { 
+    //log the new connection to console.
+    console.log('new connection: ' + sock.id);
+    createPlayer(sock.id);
+    //create control callbacks
+    sock.on('thrust', function () {
+       let player = getPlayer(sock.id);
+    });
+    sock.on('deThrust', function () {
+        let player = getPlayer(sock.id);
+    });
+    sock.on('rotateLeft', function () {
+        let player = getPlayer(sock.id);
+    });
+    sock.on('rotateRight', function () {
+        let player = getPlayer(sock.id);
+    });
+    sock.on('strafeLeft', function () {
+        let player = getPlayer(sock.id);
+    });
+    sock.on('strafeRight', function () {
+        let player = getPlayer(sock.id);
+    });
+    sock.on('stabalize', function () {
+        let player = getPlayer(sock.id);
+    });
+
+
+
+    //handle disconnects
+    sock.on('disconnect', function () {
+        console.log("disconnected: " + sock.id);
+        removePlayer(sock.id);
     });
 });
+//List of players
+let players = new Array();
+//send player states
+function sendUpdates() {
 
+}
+//create player
+function createPlayer(id) {
+    let player = new Player(id, 0, 0, 0, 0, 100, 0, 0, 100);
+    players.push(player);
+    console.log(players.length);
+}
+//remove players
+function removePlayer(id) {
+    players = players.filter(function (value, index, arr) {
+        return value.id !== id;
+    });
+    console.log(players.length);
+}
+
+function getPlayer(id) {
+     let tempPlayer = players.filter(function (value, index, arr) {
+        return value.id === id;
+    });
+    console.log("got player: " + tempPlayer[0].id);
+    return tempPlayer;
+}
