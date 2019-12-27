@@ -1,8 +1,25 @@
-'use strict';
-var http = require('http');
-var port = process.env.PORT || 1337;
 
-http.createServer(function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello World\n');
-}).listen(port);
+//Create express server.
+const app = require('express')();
+const express = require('express');
+const http = require('http').createServer(app);
+//Setup socket.io
+const io = require('socket.io')(http);
+
+
+
+app.get('/', function (req, res) {
+    res.sendFile(__dirname + '/client/index.html');
+
+});
+//Setup listening port.
+const port = 3000;
+http.listen(port);
+app.use(express.static('Client'));
+io.on('connection', function (sock) {
+    console.log('new connection');
+    sock.on('text', function (msg) {
+        console.log('message' + msg);
+    });
+});
+
