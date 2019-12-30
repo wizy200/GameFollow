@@ -5,6 +5,8 @@ const express = require('express');
 const http = require('http').createServer(app);
 //Setup socket.io
 const io = require('socket.io')(http);
+//Planck Physics
+const planck = require('planck-js')();
 
 
 
@@ -81,3 +83,17 @@ function getPlayer(id) {
     console.log("got player: " + tempPlayer[0].id);
     return tempPlayer;
 }
+
+
+var world = plank.world({
+    gravity: planck.Vec2(0, 10)
+});
+
+var ground = world.createBody({
+    type: 'static',
+    position: planck.Vec2(2,5)
+});
+
+ground.createFixture({
+    shape: planck.Edge(Vec2(-40.0, 0.0), Vec2(40.0,0.0))
+});

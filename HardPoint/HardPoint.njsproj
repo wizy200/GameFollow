@@ -30,9 +30,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Client\app.js" />
+    <Compile Include="Client\serverview.html" />
+    <Compile Include="Client\ServerView.js" />
     <Compile Include="Models\player.js" />
     <Compile Include="Models\world.js" />
     <Compile Include="server.js" />
+    <Compile Include="world.js" />
     <Content Include="Client\images\Outline.png" />
     <Content Include="Client\index.css" />
     <Content Include="Client\Index.html" />
