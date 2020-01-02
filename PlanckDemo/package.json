@@ -1,0 +1,9 @@
+{
+  "name": "planck-demo",
+  "version": "0.0.0",
+  "description": "PlanckDemo",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}

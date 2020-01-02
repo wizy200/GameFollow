@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "HardPoint", "HardPoint\HardPoint.njsproj", "{96E4B02D-090B-45AD-8BF0-774012D13A05}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "PlanckDemo", "PlanckDemo\PlanckDemo.njsproj", "{DB450FF2-C317-492F-BECC-F42D3067EECF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{96E4B02D-090B-45AD-8BF0-774012D13A05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96E4B02D-090B-45AD-8BF0-774012D13A05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96E4B02D-090B-45AD-8BF0-774012D13A05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB450FF2-C317-492F-BECC-F42D3067EECF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB450FF2-C317-492F-BECC-F42D3067EECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB450FF2-C317-492F-BECC-F42D3067EECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB450FF2-C317-492F-BECC-F42D3067EECF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

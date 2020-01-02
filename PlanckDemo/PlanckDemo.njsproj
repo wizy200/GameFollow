@@ -2,15 +2,15 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-    <Name>HardPoint</Name>
-    <RootNamespace>HardPoint</RootNamespace>
+    <Name>PlanckDemo</Name>
+    <RootNamespace>PlanckDemo</RootNamespace>
     <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>96e4b02d-090b-45ad-8bf0-774012d13a05</ProjectGuid>
+    <ProjectGuid>db450ff2-c317-492f-becc-f42d3067eecf</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>server.js</StartupFile>
     <SearchPath>
@@ -29,24 +29,9 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Client\app.js" />
-    <Compile Include="Client\Demo.js" />
-    <Compile Include="Client\Test.html" />
-    <Compile Include="Client\Test.js" />
-    <Compile Include="Models\player.js" />
-    <Compile Include="Models\world.js" />
     <Compile Include="server.js" />
-    <Compile Include="world.js" />
-    <Content Include="Client\images\Outline.png" />
-    <Content Include="Client\index.css" />
-    <Content Include="Client\Index.html" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Client\" />
-    <Folder Include="Models\" />
-    <Folder Include="Client\images\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
